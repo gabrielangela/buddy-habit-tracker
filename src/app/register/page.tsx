@@ -4,7 +4,7 @@ import { useActionState } from 'react';
 import { registerUser } from './actions';
 
 export default function RegisterPage() {
-  const [formState, action] = useActionState(registerUser, { error: null });
+  const [formState, action] = useActionState(registerUser, { error: '' });
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#f7eee6] px-4">

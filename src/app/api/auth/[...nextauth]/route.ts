@@ -25,7 +25,7 @@ export const authConfig = {
           where: { email: credentials.email },
         });
 
-        if (!user || !user.password) return null;
+        if (!user?.password) return null;
 
         const isValid = await bcrypt.compare(
           credentials.password,
