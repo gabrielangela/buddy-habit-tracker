@@ -10,6 +10,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // ignore
+  {
+    ignores: ["src/generated/prisma/wasm.js"],
+  },
+
+  // config Next.js dan TypeScript
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
