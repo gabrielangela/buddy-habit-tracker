@@ -51,6 +51,12 @@ export default function HomePage() {
     fetchHabits();
   };
 
+  useEffect(() => {
+    if (!session) {
+      router.push("/login");
+    }
+  }, [session]);
+
   return (
     <main className="min-h-screen bg-[#F8EFE6] px-4 py-8 flex flex-col items-center">
       <div className="w-full max-w-3xl">
