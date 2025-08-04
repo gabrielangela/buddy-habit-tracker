@@ -62,7 +62,7 @@ export default function LoginPage() {
 
         <button
           type="button"
-          onClick={() => signIn('google')}
+          onClick={() => signIn('google', { callbackUrl: '/home' })}
           className="w-full py-2 bg-[#a47551] text-white font-semibold rounded-full"
         >
           Sign In with Google
